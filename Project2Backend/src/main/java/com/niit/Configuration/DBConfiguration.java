@@ -7,7 +7,8 @@ import javax.sql.DataSource;
 import org.apache.commons.dbcp.BasicDataSource;
 import org.hibernate.SessionFactory;
 import org.springframework.context.annotation.Bean;
-import org.springframework.orm.hibernate3.HibernateTransactionManager;
+import org.springframework.orm.hibernate4.HibernateTransactionManager;
+//import org.springframework.orm.hibernate3.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
 
 public class DBConfiguration {
@@ -23,7 +24,7 @@ public class DBConfiguration {
 			hibernateProperties.setProperty("hibernate.hbm2ddl.auto", "update");
 			hibernateProperties.setProperty("hibernate.show_sql", "true");
 			lsf.addProperties(hibernateProperties);
-			lsf.scanPackages("com.niit.models");
+			lsf.scanPackages("com.niit");
 		    return lsf.buildSessionFactory();
 		}	  
 		@Bean
@@ -31,10 +32,10 @@ public class DBConfiguration {
 			System.out.println("Inside getDataSource()");
 		    BasicDataSource dataSource = new BasicDataSource();
 		    dataSource.setDriverClassName("oracle.jdbc.OracleDriver");
-		    dataSource.setUrl("jdbc:oracle:thin:@localhost:1521:XE");
+		    dataSource.setUrl("jdbc:oracle:thin:@localhost:1521:orcl");
 		    System.out.println("Setting values for username and password");
 		    dataSource.setUsername("admin");
-		    dataSource.setPassword("project_1234");
+		    dataSource.setPassword("Project_123");
 		    System.out.println(dataSource.getUsername());
 		    System.out.println(dataSource.getPassword());
 		    return dataSource;	    
