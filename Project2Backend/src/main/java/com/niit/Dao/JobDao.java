@@ -1,5 +1,7 @@
 package com.niit.Dao;
 
-public interface JobDao {
+import com.niit.models.Job;
 
+public interface JobDao {
+void addJob(Job job);
 }
