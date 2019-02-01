@@ -11,10 +11,14 @@ import org.springframework.web.bind.annotation.RestController;
 import com.niit.Dao.JobDao;
 import com.niit.models.ErrorClazz;
 import com.niit.models.Job;
+
+
+
+
 @RestController
 public class JobController {
 	@Autowired
-	private JobDao jobDao;
+	public JobDao jobDao;
 	@RequestMapping(value="/addjob",method=RequestMethod.POST)
 
 	public  ResponseEntity<?>  addJob(@RequestBody Job job){
@@ -25,7 +29,7 @@ public class JobController {
 				return new ResponseEntity<ErrorClazz>(errorClazz,HttpStatus.INTERNAL_SERVER_ERROR);			
 			}
 		return new ResponseEntity<Job>(job,HttpStatus.OK);
-			
+		
 				
 	}
 	

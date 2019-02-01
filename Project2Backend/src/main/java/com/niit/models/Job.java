@@ -16,15 +16,14 @@ public class Job {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int jobId;
 	@Column(nullable=false)
-	private String JobTitle;
-	private String JobDescription;
+	private String jobTitle;
+	private String jobDescription;
 	@Column(nullable=false)
-	private String SkillsRequired;
-	private String Location;
-	private Date PostedOn;
-	private String Yrs_of_Exp;
-	private String Reference;
-	
+	private String skillsRequired;
+	private String location;
+	private Date postedOn;
+	private String yrs_of_Exp;
+	private String reference;
 	public int getJobId() {
 		return jobId;
 	}
@@ -32,45 +31,49 @@ public class Job {
 		this.jobId = jobId;
 	}
 	public String getJobTitle() {
-		return JobTitle;
+		return jobTitle;
 	}
 	public void setJobTitle(String jobTitle) {
-		JobTitle = jobTitle;
+		this.jobTitle = jobTitle;
 	}
 	public String getJobDescription() {
-		return JobDescription;
+		return jobDescription;
 	}
 	public void setJobDescription(String jobDescription) {
-		JobDescription = jobDescription;
+		this.jobDescription = jobDescription;
 	}
 	public String getSkillsRequired() {
-		return SkillsRequired;
+		return skillsRequired;
 	}
 	public void setSkillsRequired(String skillsRequired) {
-		SkillsRequired = skillsRequired;
+		this.skillsRequired = skillsRequired;
 	}
 	public String getLocation() {
-		return Location;
+		return location;
 	}
 	public void setLocation(String location) {
-		Location = location;
+		this.location = location;
 	}
 	public Date getPostedOn() {
-		return PostedOn;
+		return postedOn;
 	}
 	public void setPostedOn(Date postedOn) {
-		PostedOn = postedOn;
+		this.postedOn = postedOn;
 	}
 	public String getYrs_of_Exp() {
-		return Yrs_of_Exp;
+		return yrs_of_Exp;
 	}
 	public void setYrs_of_Exp(String yrs_of_Exp) {
-		Yrs_of_Exp = yrs_of_Exp;
+		this.yrs_of_Exp = yrs_of_Exp;
 	}
 	public String getReference() {
-		return Reference;
+		return reference;
 	}
 	public void setReference(String reference) {
-		Reference = reference;
+		this.reference = reference;
 	}
+	
+	
 }
+
+	
